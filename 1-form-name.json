@@ -1,0 +1,99 @@
+{
+    "form_name": "อ.1",
+    "form_id": "1-form-name",
+    "form_oid": "abcdefghijklmn",
+    "image_logo": "img/logo/un-logo.jpg",
+    "form_fields": [
+        {
+            "field_type": "textbox",
+            "field_name": "first_name_th",
+            "field_label": "ชื่อ",
+            "max_length": "20",
+            "min_length": "0"
+        },
+
+        {
+            "field_type": "textbox",
+            "field_name": "last_name_th",
+            "field_label": "นามสกุล",
+            "max_length": "20",
+            "min_length": "0"
+        },
+
+        {
+            "field_type": "dropdown_city",
+            "field_name": "city_th",
+            "field_label": "จังหวัด"
+        },
+
+        {
+            "field_type": "radiobox_gender",
+            "field_name": "gender_th",
+            "field_label": "เพศ"
+        },
+
+        {
+            "field_type": "dropdown",
+            "field_name": "pre_name_th",
+            "field_label": "คำนำหน้าชื่อ",
+            "field_detail": ["นาง", "นางสาว", "นาย", "ด.ญ."]
+        },
+
+        {
+            "field_type": "dropdown",
+            "field_name": "education_th",
+            "field_label": "การศึกษา",
+            "field_detail": ["ปวช", "ปวส", "ปริญญาตรี", "ปริญญาโท"]
+        },
+
+        {
+            "field_type": "radiobox",
+            "field_name": "blood_type_th",
+            "field_label": "หมู่เลือด",
+            "field_detail": ["A", "B", "O", "AB"]
+        },
+
+        {
+            "field_type": "email",
+            "field_name": "email_th",
+            "field_label": "อีเมล",
+            "max_length": "30",
+            "min_length": "0"
+        },
+
+        {
+            "field_type": "checkbox",
+            "field_name": "color_th",
+            "field_label": "สี",
+            "field_detail": [{
+                    "name": "ส้ม",
+                    "value": "false"
+                }, {
+                    "name": "แดง",
+                    "value": "false"
+                },
+                {
+                    "name": "เขียว",
+                    "value": "false"
+                }, {
+                    "name": "น้ำเงิน",
+                    "value": "false"
+                }]
+        },
+
+        {
+            "field_type": "textbox_phone",
+            "field_name": "โทรศัพท์",
+            "field_label": "0812345xxx",
+            "max_length": "10"
+        },
+
+        {
+            "field_type": "textbox_date",
+            "field_name": "เดือน/วัน/ปี",
+            "field_label": "01",
+            "max_length": "31",
+            "min_length": "1"
+        }
+    ]
+}

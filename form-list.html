@@ -1,0 +1,8 @@
+<body ng-controller=I ndexListController>
+    <ul class "form">
+        <li ng-repeat="form in info">
+            <span>	{{ form.id }} </span>
+            <a href="#/forms/{{form.id}}">{{form.name}} </a>
+        </li>
+    </ul>
+</body>

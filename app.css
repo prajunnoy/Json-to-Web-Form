@@ -1,0 +1,23 @@
+body {
+    margin: 40px 20px 40px 20px;
+    font-size: 18px;
+}
+
+/* form-detail.html */
+
+
+/* img and form name header */
+
+.form-header {
+    height: 150px;
+}
+img {
+    vertical-align: middle;
+    max-height: 100%;
+    max-width: 100%;
+}
+.form-header h1 {
+    display: inline-block;
+    text-align: center;
+    font-size: 24pt;
+}

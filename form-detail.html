@@ -1,0 +1,75 @@
+<div class form-section>
+
+    <!-- PAGE HEADER -->
+    <div class="form-header"> <img ng-src="{{info.image_logo}}" />
+        <h1>{{info.form_name}}</h1>
+    </div>
+
+    <form name="Myform" ng-repeat="field in info.form_fields">
+
+        <!-- textbox -->
+        <div ng-if="field.field_type == 'textbox'">
+            {{field.field_label}}:
+            <input placeholder="{{field.field_label}}" name="alphabet" ng-model="alphabet" ng-minlength="field.min_length" maxlength="{{field.max_length}}" ng-pattern="/^(\D)+$/" required />
+            <div role='alert'>
+                <span ng-show="Myform.alphabet.$error.pattern">Text only.</span>
+                <span ng-show="Myform.alphabet.$error.minlength">Too short!</span>
+                <span ng-show="Myform.alphabet.$error.maxlength">Too long!</span>
+            </div>
+        </div>
+
+
+        <!-- dropdown-list -->
+        <div ng-if="field.field_type == 'dropdown'">
+            <!-- dropdown-list without null -->
+            {{field.field_label}}:
+            <select ng-model=s elect_opt ng-options='detail for detail in field.field_detail'>
+                <option value="" disabled selected>{{field.field_label}}</option>
+            </select>
+        </div>
+
+        <!-- radiobox -->
+        <div ng-if="field.field_type == 'radiobox'">
+            {{field.field_label}}:
+            <label ng-repeat="detail in field.field_detail">
+                <input type="radio" name="detail" ng-value="true" />{{ detail }} &nbsp;
+            </label>
+        </div>
+
+        <!-- checkbox -->
+        <div ng-if="field.field_type == 'checkbox'">
+            {{field.field_label}}:
+            <div ng-repeat="check in field.field_detail">
+                <label>
+                    <input type="checkbox" ng-model="check.value" /> {{ check.name }}
+                </label>
+            </div>
+        </div>
+
+        <!-- Email -->
+        <div ng-if="field.field_type == 'email'">
+            {{field.field_label}}:
+            <input type="email" placeholder="me@example.com" name="input" ng-model="email.text" maxlength="{{field.max_length}}" required ng-pattern="/^[a-z]+[a-z0-9._-]+@[a-z]+\.[a-z.]{2,5}$/">
+            <div role='alert'>
+                <span ng-show="Myform.input.$error.required"> Reqired! </span>
+                <span ng-show="Myform.input.$error.pattern">This is not a valid email. </span>
+            </div>
+        </div>
+
+        <!-- textbox_Telphone -->
+        <div ng-if="field.field_type == 'textbox_phone'">
+            {{field.field_name}}:
+            <input type="tel" maxlength="{{field.max_length}}" placeholder="{{field.field_label}}" name="telphone" ng-model="telephone" ng-pattern="/^\d+$/" required/>
+            <div role='alert'>
+                <span ng-show="Myform.telphone.$error.pattern">Number only.</span>
+            </div>
+        </div>
+
+        <!-- textbox_calendar -->
+        <div ng-if="field.field_type == 'textbox_date'">
+            {{field.field_name}}:
+            <input type="date" placeholder="{{field.field_label}}" />
+        </div>
+
+    </form>
+</div>
