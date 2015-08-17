@@ -1,7 +1,7 @@
 angular.module('MyApp', [
   'ngRoute'
 ]);
-// ta
+// routing and layout for form-list view and form-detail vieww
 angular.module('MyApp').config(['$routeProvider',
   function ($routeProvider) {
         $routeProvider.
