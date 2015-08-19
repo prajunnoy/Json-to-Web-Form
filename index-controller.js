@@ -13,12 +13,12 @@ function ($scope, $routeParams, $http) {
             $scope.info = data;
 
             // cities name list
-            /* $scope.cities = ["bkk", "xiang", "robroo", "hehe", "huhu"];
+            $scope.cities = ["bkk", "xiang", "robroo", "hehe", "huhu"];
             $scope.selectcity = $scope.cities[0];
 
             // gender list
             $scope.genders = ["female", "male"];
-            $scope.selectgender = $scope.genders[0]; */
+            $scope.selectgender = $scope.genders[0];
 
             // email sample
             $scope.email = {
