@@ -23,7 +23,7 @@
         <div ng-if="field.field_type == 'dropdown'">
             <!-- dropdown-list without null -->
             {{field.field_label}}:
-            <select ng-model=s elect_opt ng-options='detail for detail in field.field_detail'>
+            <select ng-model=select_opt ng-options='detail for detail in field.field_detail'>
                 <option value="" disabled selected>{{field.field_label}}</option>
             </select>
         </div>
@@ -32,7 +32,7 @@
         <div ng-if="field.field_type == 'radiobox'">
             {{field.field_label}}:
             <label ng-repeat="detail in field.field_detail">
-                <input type="radio" ng-value="detail" />{{ detail }} &nbsp;
+                <input type="radio" name="detail" ng-value="true" />{{ detail }} &nbsp;
             </label>
         </div>
 
