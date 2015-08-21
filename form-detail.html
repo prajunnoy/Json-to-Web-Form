@@ -32,7 +32,7 @@
         <div ng-if="field.field_type == 'radiobox'">
             {{field.field_label}}:
             <label ng-repeat="detail in field.field_detail">
-                <input type="radio" name="detail" ng-value="true" />{{ detail }} &nbsp;
+                <input type="radio" ng-value="detail" />{{ detail }} &nbsp;
             </label>
         </div>
 
